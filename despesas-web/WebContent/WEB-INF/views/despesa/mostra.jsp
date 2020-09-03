@@ -18,7 +18,7 @@
 		<input type="checkbox" name="pago" value="true" ${despesa.pago ? 'checked' : ''} />
 		<br /> Data de pagamento:<br />
 		<input class="form-control" type="text"	name="dataPagamento"
-		     value="<fmt:formatDate value="${despesa.dataPagamento.time}" pattern="dd/MM/yyyy" /> " />
+		     value="<fmt:formatDate value="${despesa.dataPagamento.time}" pattern="dd/MM/yyyy" />"/>
 		<br />
 		<br />
 		<input class="btn btn-primary" type="submit" value="Alterar" />
