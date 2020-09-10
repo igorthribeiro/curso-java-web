@@ -2,10 +2,16 @@ package br.com.kasolution.dominio;
 
 import java.time.LocalDate;
 
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.format.annotation.DateTimeFormat.ISO;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 public class Pagamento {
     
     private Integer codigo;
     private String descricao;
+    @JsonFormat(pattern = "dd/MM/yyyy - EEEE")
     private LocalDate dataVencimento;
     private Double valor;
     private Boolean pago;
@@ -61,7 +67,7 @@ public class Pagamento {
         this.valor = valor;
     }
 
-	    @Override
+	@Override
     public String toString() {
         return "Pagamento{" + "codigo=" + codigo + ", descricao=" + descricao + ", dataVencimento=" + dataVencimento + ", valor=" + valor + ", pago=" + pago + '}';
     }
