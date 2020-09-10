@@ -17,7 +17,7 @@ public class StaticBD {
         pagamentos.add(new Pagamento(4, "Cursos", LocalDate.of(2020,8,19), 2300.00, true));
         pagamentos.add(new Pagamento(5, "Cadeira", LocalDate.of(2020,9,5), 750.00, false));
         pagamentos.add(new Pagamento(6, "Energia", LocalDate.of(2020,10,10), 280.00, false));
-        pagamentos.add(new Pagamento(7, "Fatura Celular", LocalDate.now(), 190.00, true));
+        pagamentos.add(new Pagamento(7, "Fatura Celular", LocalDate.now(), 190.00, false));
         pagamentos.add(new Pagamento(8, "Fatura Netflix", LocalDate.of(2020,11,15), 60.00, false));
     }
 
