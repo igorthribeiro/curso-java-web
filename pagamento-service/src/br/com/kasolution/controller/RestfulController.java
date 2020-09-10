@@ -16,23 +16,25 @@ import br.com.kasolution.dominio.Pagamento;
 @RestController
 public class RestfulController {
 
+	@RequestMapping("get-pagamento/{id}")
+	public Pagamento getPagamento(@PathVariable("id") int id) {
+		Pagamento pagamento = StaticBD.getPagamentos().get(id);
+		return pagamento;
+	}
+
 	@RequestMapping("get-pagamentos/{data}")
 	public List<Pagamento> getPagamento(@PathVariable("data") String data) {
 		switch (data) {
 			case "hoje":
-				return StaticBD.getPagamentos().stream().filter(p -> p.getDataVencimento().equals(LocalDate.now()))
+				return StaticBD.getPagamentos()
+						.stream()
+						.filter(p -> p.getDataVencimento().equals(LocalDate.now()))
 						.collect(Collectors.toList());
 			case "todos":
 				return StaticBD.getPagamentos();
 			default:
 				return null;
 			}
-	}
-
-	@RequestMapping("get-pagamento/{id}")
-	public Pagamento getPagamento(@PathVariable("id") int id) {
-		Pagamento pagamento = StaticBD.getPagamentos().get(id);
-		return pagamento;
 	}
 
 }
