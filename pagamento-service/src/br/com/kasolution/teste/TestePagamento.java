@@ -2,7 +2,6 @@ package br.com.kasolution.teste;
 
 import java.time.LocalDate;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import br.com.kasolution.dados.StaticBD;
 import br.com.kasolution.dominio.Pagamento;
